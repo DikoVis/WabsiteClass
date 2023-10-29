@@ -1,0 +1,588 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    background-color: rgb(41, 134, 255);
+    justify-content: space-around;
+    height: 50px;
+    align-items: center;
+    top: 0;
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li a:hover {
+    color: white;
+    transition: all 1s;
+}
+
+.Brain {
+    color: rgb(250, 104, 19);
+}
+
+.name-logo a {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -6px;
+    top: -4px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: aliceblue;
+    border-radius: 3px;
+    transition: all 0.1s;
+}
+
+/* ANIMASI */
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked~span:nth-child(2) {
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked~span:nth-child(4) {
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked~span:nth-child(3) {
+    transform: scale(0);
+    opacity: 0;
+}
+
+/* Home */
+header {
+    position: relative;
+    padding-top: 5rem;
+    padding-left: 10rem;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    align-items: center;
+    background-image: url('Gallery\ And\ Foto/background\ it.jpg');
+    background-size: 100%;
+}
+
+header div h3 a {
+    position: relative;
+    background: rgb(41, 134, 255);
+    border-radius: 5px;
+    padding: 3px;
+    color: black;
+    text-decoration: none;
+}
+
+header div h3 a:hover {
+    color: white;
+    font-size: 20px;
+    background: rgb(255, 96, 22);
+    transition: all 1s;
+}
+
+/* About Class */
+.about {
+    height: 120vh;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    background-image: url('Gallery\ And\ Foto/about2.jpg');
+    background-size: 100%;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.strukturkelas {
+    padding: 60px;
+}
+
+.strukturkelas h1 {
+    text-align: center;
+}
+
+.jadwalpiket {
+    padding: 70px;
+}
+
+.jadwalpiket table {
+    width: 600px;
+    height: 150px;
+}
+
+.penjelasan {
+    text-align: justify;
+}
+
+.buttonnext {
+    position: relative;
+    background: rgb(41, 134, 255);
+    border-radius: 5px;
+    padding: 3px;
+    color: black;
+    text-decoration: none;
+}
+
+.buttonnext:hover {
+    color: white;
+    font-size: 20px;
+    background: rgb(255, 96, 22);
+    transition: all 1s;
+}
+
+.list-s {
+    position: relative;
+    background-color: rgb(255, 96, 22);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.list-ss {
+    position: relative;
+    background-color: rgb(255, 96, 22);
+    width: 80%;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/* Social Media */
+.container-media {
+    height: 50vh;
+    display: flex;
+    justify-content: space-evenly;
+    background-image: url('Gallery\ And\ Foto/background\ social\ media.jpg');
+    background-size: 50%;
+}
+
+.link-media {
+    text-decoration: none;
+}
+
+.ig {
+    margin: 25px;
+    width: 250px;
+    height: 250px;
+    background-color: rgb(71, 71, 71);
+    border-radius: 50px;
+    color: white;
+}
+
+.ig img {
+    width: 100px;
+    height: 100px;
+}
+
+.ig h3 {
+    margin-top: 90px;
+    margin-left: 25px;
+}
+
+.ig p {
+    margin-left: 30px;
+}
+
+.ig:hover {
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+    transition: all 0.5s;
+}
+
+.link-oldwab {
+    text-decoration: none;
+}
+
+.oldwab {
+    margin: 25px;
+    width: 250px;
+    height: 250px;
+    background-color: rgb(71, 71, 71);
+    border-radius: 50px;
+    color: white;
+}
+
+.oldwab img {
+    width: 70px;
+    height: 70px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.oldwab h3 {
+    margin-top: 90px;
+    margin-left: 25px;
+}
+
+.oldwab p {
+    margin-left: 30px;
+}
+
+.oldwab:hover {
+    width: 280px;
+    height: 280px;
+    background-color: rgb(255, 112, 17);
+    transition: all 0.5s;
+}
+
+.spotify {
+    text-decoration: none;
+}
+
+.playlist {
+    margin: 25px;
+    width: 250px;
+    height: 250px;
+    background-color: rgb(71, 71, 71);
+    border-radius: 50px;
+    color: white;
+}
+
+.playlist img {
+    width: 80px;
+    height: 80px;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.playlist h3 {
+    margin-top: 90px;
+    margin-left: 25px;
+}
+
+.playlist p {
+    margin-left: 30px;
+}
+
+.playlist:hover {
+    width: 280px;
+    height: 280px;
+    background-color: rgb(0, 212, 64);
+    transition: all 0.5s;
+}
+
+/* Gallery Class*/
+.container-gallery {
+    height: 90vh;
+    background-size: 50%;
+    background-image: url('Gallery\ And\ Foto/gallery.jpg');
+}
+
+.galleryclass {
+    width: 70%;
+    height: 400px;
+    transform: translate(20%, 20%);
+    background-image: url('Gallery\ class\ 10\ Axioo\ 1/Gallery (1).jpg');
+    background-size: 100%;
+    box-shadow: 1px 2px 10px 10px black;
+    animation: slider 10s infinite linear;
+}
+
+@keyframes slider {
+    1% {
+        background-image: url('Gallery\ class\ 10\ Axioo\ 1/Gallery (2).jpg');
+    }
+
+    35% {
+        background-image: url('Gallery\ class\ 10\ Axioo\ 1/Gallery (3).jpg');
+    }
+
+    75% {
+        background-image: url('Gallery\ class\ 10\ Axioo\ 1/Gallery (4).jpg');
+    }
+}
+
+.container-gallery h3 {
+    margin-left: 200px;
+    margin-top: 45px;
+}
+
+/* Footer */
+footer {
+    height: 40vh;
+    background-color: rgb(41, 134, 255);
+    color: white;
+}
+
+.footer-informasi img {
+    width: 10%;
+    height: 10%;
+}
+
+.footer-informasi h1 {
+    margin-top: -130px;
+    margin-left: 700px;
+}
+
+.footer-informasi ul {
+    margin-left: 720px;
+}
+
+.footer-informasi .quote {
+    margin-left: 1000px;
+    margin-top: -109px;
+}
+
+.footer-informasi .container-quote {
+    margin-left: 1000px;
+    font-style: italic;
+}
+
+.inf {
+    margin-left: 1090px;
+}
+
+.last-footer {
+    background-color: rgb(62, 112, 182);
+    margin-top: 97px;
+}
+
+.last-footer h1 {
+    text-align: center;
+}
+
+.footer-informasi ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Responsive */
+
+/* NAVBAR Tablet */
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: flex;
+    }
+}
+
+/* Navbar HP */
+@media screen and (max-width: 480px) {
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        background-color: rgb(41, 134, 255);
+        z-index: 1;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    nav ul.slide {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .menu-toggle {
+        display: flex;
+        z-index: 2;
+    }
+
+    header {
+        position: relative;
+        padding-top: 2rem;
+        padding-left: 1rem;
+        height: 150vh;
+        display: grid;
+        grid-template-columns: repeat(1, 3fr);
+        gap: 3rem;
+        align-items: center;
+        background-image: url('Gallery\ And\ Foto/background\ it1.jpg');
+        background-size: 120vh;
+    }
+
+    .about {
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 3fr);
+        background-image: url('Gallery\ And\ Foto/about3.jpg');
+        background-size: 160%;
+    }
+
+    .strukturkelas {
+        padding: 65px;
+    }
+
+    .jadwalpiket table {
+        width: 400px;
+        height: 150px;
+    }
+
+    .jadwalpiket h3 {
+        font-size: 12px;
+    }
+
+    .container-media {
+        height: 50vh;
+        display: flex;
+        align-items: stretch;
+    }
+
+    .ig {
+        margin: 25px;
+        width: 200px;
+        height: 250px;
+        background-color: rgb(71, 71, 71);
+        border-radius: 50px;
+        color: white;
+    }
+
+
+    .oldwab {
+        margin: 25px;
+        width: 80px;
+        height: 250px;
+        background-color: rgb(71, 71, 71);
+        border-radius: 50px;
+        color: white;
+    }
+
+    .oldwab img {
+        margin-left: 2px;
+    }
+
+    .oldwab h3 {
+        margin-top: 35px;
+        margin-left: 15px;
+    }
+
+    .oldwab p {
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    .playlist {
+        margin-right: 20px;
+        width: 80px;
+        height: 250px;
+        background-color: rgb(71, 71, 71);
+        border-radius: 50px;
+        color: white;
+    }
+
+    .playlist img {
+        margin-left: 1px;
+    }
+
+    .playlist h3 {
+        margin-top: 30px;
+        margin-left: 15px;
+    }
+
+    .playlist p {
+        margin-left: 20px;
+    }
+
+    .container-gallery {
+        height: 55vh;
+    }
+
+    .galleryclass {
+        width: 70%;
+        height: 200px;
+    }
+
+    .container-gallery h3 {
+        margin-left: 80px;
+        margin-top: 50px;
+    }
+
+
+    footer {
+        height: 40vh;
+        background-color: rgb(41, 134, 255);
+        color: white;
+    }
+
+    .footer-informasi img {
+        width: 10%;
+        height: 10%;
+    }
+
+    .footer-informasi h1 {
+        margin-top: -50px;
+        margin-left: 100px;
+    }
+
+    .footer-informasi ul {
+        margin-left: 120px;
+    }
+
+    .footer-informasi .quote {
+        margin-left: 300px;
+        margin-top: -109px;
+    }
+
+    .footer-informasi .container-quote {
+        margin-left: 280px;
+        font-style: italic;
+    }
+
+    .inf {
+        margin-left: 360px;
+    }
+
+    .last-footer {
+        background-color: rgb(62, 112, 182);
+        margin-top: 97px;
+    }
+
+    .last-footer h1 {
+        text-align: center;
+    }
+}
